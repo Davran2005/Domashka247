@@ -12,12 +12,12 @@ public class Main {
 
     }
 
-    public static String symmetricDifference(Set<Integer> set1, Set<Integer> set2) {
+    public static Set<Integer> symmetricDifference(Set<Integer> set1, Set<Integer> set2) {
         Set<Integer> set3 = new HashSet<>(set1);
         set3.addAll(set2);
-        Set<Integer> sort = new HashSet<>(set1);
-        sort.retainAll(set2);
-        set3.removeAll(sort);
-        return "Oтвет: "+set3;
+        Set<Integer> set4 = new HashSet<>(set1);
+        set4.retainAll(set2);
+        set3.removeAll(set4);
+        return set3;
     }
     }
